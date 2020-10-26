@@ -1,0 +1,10 @@
+cmake-build-debug
+cmake-build-release
+.idea
+.git
+.DS_Store
+.vs
+out
+
+conan
+!conan/conanfile.txt
