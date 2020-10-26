@@ -29,7 +29,7 @@ libmysqlclient/8.0.17
 cmake
 ```
 
-#Credits
+## Credits
 [Adi Iman](https://github.com/adimixx)  
 [Iqmal Rizal](https://www.instagram.com/iqmalriz/)
 
