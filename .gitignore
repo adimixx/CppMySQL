@@ -6,5 +6,5 @@ cmake-build-release
 .vs
 out
 
-conan
+conan/*
 !conan/conanfile.txt
