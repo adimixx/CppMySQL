@@ -2,7 +2,6 @@
 #include<iostream>
 #include <iomanip>
 #include<string>
-#include<conio.h>
 #include<mysql.h>
 
 using namespace std;
@@ -26,19 +25,18 @@ public:
         conn = mysql_init(0);
         if (conn)
         {
-            cout << "Database Connected" << endl;
+            cout << "Database Connection Initiated" << endl;
             cout << "Press any key to continue..." << endl;
             //(void)getchar();
             //system("cls");
         }
         else
             cout << "Failed To Connect!" << mysql_errno(conn) << endl;
-        conn = mysql_real_connect(conn, "localhost", "root", "", "dbFire", 3306, NULL, 0);
+        conn = mysql_real_connect(conn, "127.0.0.1", "root", "", "dbFire", 3306, NULL, 0);
         if (conn)
         {
-            cout << "Database Connected To MySql" << conn << endl;
+            cout << "Connected To MySql" << conn << endl;
             cout << "Press any key to continue..." << endl;
-            _getch();
             system("cls");
         }
         else
@@ -87,7 +85,6 @@ int main()
             exit(0);
         default:
             cout << "Please choose between 1 - 3. Press Enter To Continue...";
-            _getch(); // get char // pause console //
             system("cls"); // clear console
             main(); //
             break;
@@ -124,7 +121,6 @@ void Register()
         if (res->row_count == 1) //username exist
         {
             cout << "Username is already exist. Press Enter to Try Again...";
-            _getch();
             Register();
         }
         else
@@ -136,7 +132,6 @@ void Register()
             if (!qstate) //query boleh jalan
             {
                 cout << endl << "You have been registered. Press Enter to Continue...";
-                _getch();
                 main(); //go main function
             }
             else
@@ -439,7 +434,6 @@ void UpdateDelEquipment()
                 if (!qstate)
                 {
                     cout << "The Equipment has been removed. Press Enter to Continue...";
-                    _getch();
                     ListofEquipment();
                 }
                 else
